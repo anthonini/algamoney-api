@@ -21,4 +21,8 @@ public class LancamentoService {
 	public Lancamento findById(Long id) {
 		return repository.findById(id).orElse(null);
 	}
+	
+	public Lancamento salvar(Lancamento lancamento) {
+		return repository.save(lancamento);
+	}
 }
