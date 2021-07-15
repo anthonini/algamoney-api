@@ -9,6 +9,7 @@ import com.example.algamoney.api.model.Lancamento;
 import com.example.algamoney.api.model.Pessoa;
 import com.example.algamoney.api.repository.LancamentoRespository;
 import com.example.algamoney.api.repository.PessoaRepository;
+import com.example.algamoney.api.repository.filter.LancamentoFilter;
 import com.example.algamoney.api.service.exception.PessoaInexistenteOuInativaException;
 
 @Service
@@ -35,5 +36,9 @@ public class LancamentoService {
 		}
 		
 		return repository.save(lancamento);
+	}
+
+	public List<Lancamento> filtrar(LancamentoFilter filter) {
+		return repository.filtrar(filter);
 	}
 }
