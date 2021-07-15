@@ -41,4 +41,8 @@ public class LancamentoService {
 	public List<Lancamento> filtrar(LancamentoFilter filter) {
 		return repository.filtrar(filter);
 	}
+
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
 }
